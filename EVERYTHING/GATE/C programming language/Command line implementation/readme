@@ -1,0 +1,13 @@
+what to type in command prompt to execute a .c file to .o file :
+
+i) gcc -o <file_name_after_compilation> <file1.c> <file2.c> <file3.c>.......
+
+eg -> gcc -o CompiledProgram main.c functions.c
+
+ii) also we need to create a header file that already contains the definition
+    of the methods used in functions file beforehand to avoid compilation errors.
+
+for more info, read : https://chat.openai.com/share/30e7eed3-39d3-4ebb-8a60-c788d38b65ad
+
+we can also use 'clang' compiler instead of 'gcc' in above like shown below
+eg -> clang -o CompiledProgram main.c functions.c

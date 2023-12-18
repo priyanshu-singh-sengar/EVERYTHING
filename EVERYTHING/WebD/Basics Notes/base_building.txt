@@ -1,0 +1,43 @@
+Search the below-mentioned things to learn more (also read in detail about things mentioned in screenshots 
+as well.)
+
+I) 
+A browser is also just a software.
+So, how does it know about the part to use for layout and the part to use for process?
+Layout or rendering engine
+Javascript engine
+
+II) 
+https://www.geeksforgeeks.org/web-browser-engine-defination-working/
+
+III)
+https://www.geeksforgeeks.org/how-v8-compiles-javascript-code/
+
+IV)
+https://www.geeksforgeeks.org/functions-and-features-of-a-web-browser/
+
+V)
+Web Application or web development
+-> Introduction to static sites
+
+-> Advantages and Disadvantages of static sites --> Basics Notes/s1.png
+
+-> Who should create static Websites --> People who need to update a website once in a few months(eg - resume, 
+project showcasing portfolio, Form building, FAQ section webpage, small business, blogging etc)
+Static sites do not have a dedicated server-side setup in general.
+
+-> Who shouldn't create static Websites --> If websites need to be updated everyday or frequently on regular
+the interval then it is a dynamic website (eg - video streaming sites, Facebook, Instagram, Twitter, many use
+cases sites, BookMyShow etc)
+
+Static Websites are just a structure of HTML, some CSS and a little Javascript.
+
+VI)
+let's explore dynamic websites
+-> Introduction to dynamic sites --> Basics Notes/s2.png 
+
+-> Advantages of dynamic sites --> Basics Notes/s3.png
+
+ideal website choice for different applications
+
+VII) 

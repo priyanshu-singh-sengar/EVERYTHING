@@ -1,8 +1,8 @@
 /*
 
-page 4 --> notebook notes --> reference --> https://chat.openai.com/share/e76ba36e-ff9d-4a4b-a04b-0a96c7b5e9c7
+page 4, 5 --> notebook notes --> reference --> https://chat.openai.com/share/709791f6-4014-4ec8-96e8-713adee22afc
 
-page  --> 
+page 6, 7 --> 
 
 */
 #include<stdio.h>

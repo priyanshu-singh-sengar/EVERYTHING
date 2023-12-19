@@ -11,12 +11,13 @@ then type -> int a = sc.nextInt(); -> to take integer input or type
 
 //nested loops and pattern programs
 
-import java.util.Scanner;
-public class Main
+//import java.util.Scanner;
+public class Main8
 {
 	public static void main(String[] args) {
 	    
-	    /* to print
+	    /* 
+		//to print
 	    
 	    *****
 	    *   *
@@ -25,8 +26,11 @@ public class Main
 	    *****
 	    
 	    */
+
 	    //code
+
 	    /*
+
 	    int n;
 	    System.out.print("Enter the number of rows:");
 	    Scanner sc = new Scanner(System.in);
@@ -114,6 +118,7 @@ public class Main
 	    
 	    */
 	    //code 
+		/*
 	    int n;
 	    System.out.print("Enter the number of rows:");
 	    Scanner sc = new Scanner(System.in);
@@ -375,5 +380,6 @@ public class Main
 	    System.out.println();
 	    System.out.println();
 	    System.out.println();
+		 */
 	}
 }

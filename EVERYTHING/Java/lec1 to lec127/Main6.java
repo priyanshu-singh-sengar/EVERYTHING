@@ -1,6 +1,6 @@
 // Typecasting and numeric type promotion
 
-public class Main
+public class Main6
 {
 	public static void main(String[] args) {
 	    

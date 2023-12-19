@@ -3,5 +3,13 @@
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": []
+    "configurations": [
+        {
+            "type": "java",
+            "name": "lec_130AnonymousArray",
+            "request": "launch",
+            "mainClass": "lec_130AnonymousArray",
+            "projectName": "EVERYTHING_670c7255"
+        }
+    ]
 }

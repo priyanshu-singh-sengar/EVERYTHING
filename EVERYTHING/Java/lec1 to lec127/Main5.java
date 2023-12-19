@@ -1,6 +1,6 @@
 //boolean and character data Type
 
-public class Main
+public class Main5
 {
 	public static void main(String[] args) {
 	    
@@ -25,6 +25,7 @@ public class Main
 		   2. char cannot have more than one character at once i.e. 'Aa' is invalid
 		*/
 		//eg
+		/*/
 		char a = 'A';
 		char b = "A";
 		char c = 'abc'; 
@@ -33,5 +34,6 @@ public class Main
 		                       // "ABC" double inverted commas used to store String type values
 
 		System.out.println(c); //error : unclosed character literal
+		*/
 	}
 }

@@ -2,8 +2,9 @@
 //another byte type variable 
 //ans - No, we need to store it in default(i.e. int) datatype varible which is default datatype for whole no.
 
-public class Main
+public class Main3
 {
+	/*
 	public static void main(String[] args) {
 	    byte a=10, b=20, sum;
 	    short sum2;
@@ -19,6 +20,8 @@ public class Main
 	    // sum3 = a+b;
 	    // sum4 = a+b;
 	   
-	    System.out.println(sum4);
+	    //System.out.println(sum4);
+		
 	}
+	*/
 }

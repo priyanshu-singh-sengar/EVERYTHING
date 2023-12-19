@@ -3,7 +3,7 @@
 // by default a variable stores a number in double datatype so to store it in float type we need to add a
 // "f" letter at the end of number to make it recognized as float.
 
-public class Main
+public class Main4
 {
 	public static void main(String[] args) {
 	    

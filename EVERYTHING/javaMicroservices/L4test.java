@@ -103,24 +103,26 @@ class L4test{
         
         //NOTE - we need to add 'l' or 'L' at the end of long type value, if we don't use 'l'or 'L' at the end of number compiler will consider it to be an integer by default.
 
-        long data14 = 1234504356l; //is well within range of integer.
+        //long data14 = 1234504356l; //is well within range of integer.
 
         System.out.println("MAX RANGE of int datatype :: " + Long.MAX_VALUE); 
 
         System.out.println("MAX RANGE of int datatype :: " + Long.MIN_VALUE);
 
-        long data9 = "sachin"; //error: incompatible types: String cannot be converted to long
+        //long data9 = "sachin"; //error: incompatible types: String cannot be converted to long
 
         //What if we allot a single character to a int type variable:-
 
-        long data10 = 'a'; //it won't give any compile time error or compile error because.....(write it later...)
+        //long data10 = 'a'; //it won't give any compile time error or compile error because.....(write it later...)
 
-        long data11 = 121.3; //error: incompatible types: possible lossy conversion from double to long.
+        //long data11 = 121.3; //error: incompatible types: possible lossy conversion from double to long.
 
-        long data12 = true; //error: incompatible types: boolean cannot be converted to long
+        //long data12 = true; //error: incompatible types: boolean cannot be converted to long
 
-        long data15 = 9223372036854775808l; //exceeds range of long
+        //long data15 = 9223372036854775808l; //exceeds range of long
         //error: integer number too large 
+
+        // int x = 234l; //error: incompatible types: possible lossy conversion from long to int
 */
     }  
 }

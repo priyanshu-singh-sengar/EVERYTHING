@@ -1,7 +1,6 @@
 //lecture 6 --> Control statements
-
 public class L6test{
-    public static void main(String... args){
+    public static void main(String[] args){
         //System.out.println( 1_______23.456); //underscores are ignored
          
 //IF BLOCK
@@ -85,7 +84,7 @@ public class L6test{
 */ 
 
 //NESTING OF IF-ELSE [ELSE - IF LADDER] --> not preferred by developers
-        /*
+/*
         //SYNTAX:
 
         if(){
@@ -104,7 +103,7 @@ public class L6test{
 
         }
 IF - ELSE ladder is not recommended in general. Instead of if else ladder we use switch case.
-        */
+*/
 
 //SWITCH CASE --> imp for interviews
 
@@ -433,6 +432,311 @@ IF - ELSE ladder is not recommended in general. Instead of if else ladder we use
        //1. curly braces are optional, we can take only one statement between do and 
             while (if no curly braces)
        //2. one statement should not be declarative.
+
+       do{
+        System.out.println("hello");
+       } while(true);
+ 
+        do
+        {
+            int x=10;
+        } while();
+        
+        do
+        int x=10;
+        while(true); //same logic as if and while loop we cannot write declarative statements without using curly braces
+//INTERVIEW QUESTION
+        do while(true) System.out.println("hello"); while(true);
+        //OUTPUT --> hello (infinite times), but WHY?
+        // above code is same as writing:
+    
+        do
+            while(true)
+                System.out.println();
+        while(true);  //as we know from C lang. that scope of do while is till the 
+                      //first semicolon, so in this code we donot need bracket untill
+                      //there is only 1 semicolon inside do statement. semocolon 
+                      //represents 
+  
+        do while(true);
+        //output --> CompileTimeError : error: while expected
+                                      //error: illegal start of expression 
+            
+        //logically the output should be (infinte loop but nothing is printed) but the output is error because there should be minimum 1 statement between do and while when we are implementing the do while loop because that is the main purpose behind using do while loop in the first place.
+
+        do
+        {
+            System.out.println("sachin");;
+        } while(true);
+        System.out.println("dhoni"); //this condition will become unreachable at 
+                                     //compile time.
+         //output -> error: unreachable statement
+         
+        do
+        {
+            System.out.print("sachin ");//this condition never become unreachable because in do while loop 1 iteration is compulsory before checking of condition.
+
+        } while(false);
+        System.out.println("dhoni"); 
+         
+        //output -> sachin dhoni
+
+        int a = 10, b = 20;
+        do
+        {
+            System.out.println("sachin");;
+        } while(a<b);
+        System.out.println("dhoni"); //this condition will not become unreachable at 
+                                       //compile time because at compile time compiler only knows data types of a and b and not there values so there is no error at compiler time.
+         //output -> sachin(infinte)
+         
+        int a = 10, b = 20;
+        do
+        {
+            System.out.print("sachin ");;
+        } while(a>b);
+        System.out.println("dhoni"); //No unreachability errors because do condition 
+                                       //will run once before termination of loop.
+         //output -> sachin dhoni
+  
+        final int a = 10, b = 20;
+        do
+        {
+            System.out.print("sachin ");;
+        } while(a<b);
+        System.out.println("dhoni"); //this condition will become unreachable at 
+                                       //compile time because due to final keyword, a,b
+                                       //are now compile time constants.
+         //output -> error: unreachable statement
+
+        final int a = 10, b = 20;
+        do
+        {
+            System.out.print("sachin ");; //Traversed once
+        } while(a>b); //Condition is false at compile time
+        System.out.println("dhoni"); //this is also printed
+
+        //output --> sachin dhoni
+ 
+        final int a = 10;
+        do{
+            System.out.print("sachin ");
+        } while(a>20);
+        System.out.println("dhoni"); //No unreachability error as it is a compile time error but here at compile time compiler will not be aware of the value of variable 'a' compiler will only know it's datatype only.
+
+        //OUTPUT --> sachin dhoni
+
 */
-    }
+/*
+//FOR LOOP --> when we know in advance the number of iteration that needs to be performed we go for for loop.
+
+//SYNTAX:         |             |
+                start     condition check
+              (1) |         (2) | 
+                  ↓             ↓         ↓(4)
+        for(initialisation; condition; incr/dec){
+                        /       | 
+                       /    (3) | (if condition : true)
+                      /         ↓ 
+                     /  //body of for loop
+        }           /    
+              (3)  /  
+                  ↓ 
+            //Out of loop
+        //in for loop the cursor will visit initialisation only once then it just incr/dec and checks condition.
+   
+
+//NOTE --> curly braces are optional in for loop untill first semicolon. 
+
+//BASIC STRUCTURE -> in notebook 
+
+//Examples:
+  
+        int i = 0;
+        for(System.out.println("hello"); i<3; System.out.println("hi")) //same as C programming
+            i++;  //i = 1,2,3
+        
+        //OUTPUT --> hello
+        //           hi
+        //           hi
+        //           hi
+
+        //the above code is getting no error because each expression is completely valid in for loop.
+
+
+
+//NOTE -> it is optional to write condition in for loop but it is compulsory to write 2 semicolons inside condition section. 
+        //eg - for(;;){} is valid but for(;) is not valid as we have to write 2 semicolons atleast.
+
+        for(;;){ //compiler will assume condition to be 'true' by default.
+            int x = 10;
+            System.out.println("hello");
+        }
+
+        //output -> hello (infinite)
+
+        for(int i = 0; i<true; i++){ //compiler cannot evaluate condition
+            System.out.println("Sachin");
+        }
+            System.out.println("dhoni");
+
+        //output --> error: bad operand types for binary operator '<'
+       
+        for(int i = 0; i<false; i++){ //same error as above
+            System.out.println("Sachin");
+        }
+            System.out.println("dhoni"); 
+
+        //output --> error: bad operand types for binary operator '<'
+        
+        for (int i = 0;;i++){
+            System.out.println("Sachin");
+        }
+            System.out.println("Dhoni"); //this becomes unreachable at compile time
+
+        //output --> error: unreachable statement 
+      
+        int a = 10, b = 20;
+        for (int i = 0; a<b ;i++){
+            System.out.println("Sachin");
+        }
+            System.out.println("Dhoni"); //even though it's unreachable but compiler 
+                                         // cannot tell that because at compile time
+                                         // compiler doesn't know the value of variables.
+
+        //output --> sachin(infinite loop)
+
+        final int a = 10, b = 20;
+        for (int i = 0;;i++){
+            System.out.println("Sachin");
+        }
+            System.out.println("Dhoni");
+
+        //output --> error: unreachable statement
+    
+        //SOMEONE's DOUBT:
+        boolean x = false;
+        if(x=true)
+            System.out.println("hello"); 
+        
+        //output --> hello
+*/  
+//SNIPPETS:
+/*/
+
+Q>
+        Given:
+            int x = 0;
+            int y = 10;
+            do {
+                y--; // y = y-1
+                ++x; // x = x+1
+
+            } while (x < 5);
+
+            System.out.print(x + "," + y);
+            What is the result?
+            A. 5,6
+            B. 5,5 [Answer]
+            C. 6,5
+            D. 6,6
+//Explaination:
+            y = 9, x = 1 :: while(1<5) true
+            y = 8, x = 2 :: while(2<5) true
+            y = 7, x = 3 :: while(3<5) true
+            y = 6, x = 4 :: while(4<5) true
+            y = 5, x = 5 :: while(5<5) false
+
+Q>
+        public static void main(String[] args) {
+            for (int i = 0; i <= 10; i++) { //i is declared inside for loop only so it's scope is within it
+                if (i > 6) break;
+            }
+            System.out.println(i);
+        }
+        What is the result?
+        A. 6
+        B. 7
+        C. 10
+        D. 11
+        E. Compilation fails. [Answer: i not accessible outside for loop] --> because 'i' is declared      
+                            in for loop block only so i will be erased from memory when for loop is exited.
+
+        F. An exception is thrown at runtime.
+
+Q>
+    Consider below code of Test.java file:
+        public class Test {
+            public static void main(String[] args) {
+                boolean b1 = 0; //wrong assignment
+                boolean b2 = 1; //wrong assignment
+                System.out.println(b1 + b2);
+            }
+        }
+        What is the result of compiling and executing Test class?
+        A. 0
+        B. 1
+        C. true
+        D. false
+        E. compilation error [Answer: boolean means only true,false in JAVA unlike in C or CPP]
+
+Q>
+        Given:
+            float pi = 3.141f;
+            if (pi > 3) {
+                System.out.print("pi is bigger than 3. ");
+            }else {
+                System.out.print("pi is not bigger than 3. ");
+            }finally {
+                System.out.println("Have a nice day.");
+            }
+            What is the result?
+                A. Compilation fails.[Answer:finally block cannot be used without try block]
+                B. pi is bigger than 3.
+                C. An exception occurs at runtime.
+                D. pi is bigger than 3. Have a nice day.
+                E. pi is not bigger than 3. Have a nice day.
+                //there is no error with if-else blocks in above case
+
+Q>
+    Given:
+        public static void main(String[] args) {
+            int i = 3; //line-12
+            switch(i) { //line-13
+
+                case 3: System.out.println("three"); break;
+                default: System.out.println("other"); break;//line-15
+            }
+        }
+        What is the result?
+        A. three [Answer]  --> no error
+        B. other
+        C. An exception is thrown at runtime.
+        D. Compilation fails because of an error on line 12.
+        E. Compilation fails because of an error on line 13.
+        F. Compilation fails because of an error on line 15.
+
+Q>
+    Given:
+        public static void main(String[] args) {
+            boolean i = true; //line-12
+            switch(i) { //line-13
+
+            case true: System.out.println("true"); break;
+            case false: System.out.println("false"); break;
+            default: System.out.println("other"); break;//line-15
+            }
+        }
+    What is the result?
+        A. true
+        B. false
+        C. An exception is thrown at runtime.
+        D. Compilation fails because of an error on line 12.
+
+        E. Compilation fails because of an error on line 13. // [Answer: switch arg types can be : byte,short,int,char] and wrapper classes --> but here it is boolean which is not accepted
+
+        F. Compilation fails because of an error on line 15.
+*/
+        //DOUBTS --> of other people
+    }   
 }

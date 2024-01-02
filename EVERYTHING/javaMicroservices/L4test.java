@@ -1,5 +1,6 @@
 //lecture 4 -->  on datatypes part 1
-
+ //see notebook till lecture 3
+ 
 class L4test{
     public static void main(String[] args)
     {

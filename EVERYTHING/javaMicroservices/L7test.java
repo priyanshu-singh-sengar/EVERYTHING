@@ -294,7 +294,7 @@ public class L7test {
         //Output -> -Infinity
 
         System.out.println(0/0.0); //in mathematics it's undefined and here even when infinity is available we get:
-        //Output -> NaN
+        //Output -> NaN (Not a Number)
 
         System.out.println(0/0); //int/int => int so here we get ArithmeticException as infinity not available with infinity.
        
